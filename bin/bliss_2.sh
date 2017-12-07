@@ -50,18 +50,19 @@ rm filelist_"$experiment"
 "$bin"/module/mapping_quality.sh $numb_of_files $out $experiment $outcontrol $quality $cutsite
 "$bin"/module/umi_joining.sh $numb_of_files $out $experiment $aux $outcontrol $auxcontrol $quality $cutsite
 
-if [ "$genome" = "hg19" ]; then
-    ##HERE BEDTOOLS COMPLAIN ABOUT FIELDS...###
-    # "$bin"/module/filter.centromere-telomere.sh $experiment $out $outcontrol $quality $cutsite 
-    # "$bin"/module/filter.blacklist.sh $out $outcontrol $quality $cutsite
-    # cat "$datadir"/"$experiment"/outdata/chr-loc-strand-umi_q"$quality" |cut -f-5 |LC_ALL=C uniq -c | awk '{print $2,$3,$4,$5,$6,$1}' | tr " " "," > "$datadir"/"$experiment"/auxdata/aux
-    #####
-    cat "$datadir"/"$experiment"/outdata/_q"$quality".bed | cut -f-5 |LC_ALL=C uniq -c | awk '{print $2,$3,$4,$5,$6,$1}' | tr " " "," > "$datadir"/"$experiment"/auxdata/aux
-fi
+# if [ "$genome" = "hg19" ]; then
+#     ##HERE BEDTOOLS COMPLAIN ABOUT FIELDS...###
+#     # "$bin"/module/filter.centromere-telomere.sh $experiment $out $outcontrol $quality $cutsite 
+#     # "$bin"/module/filter.blacklist.sh $out $outcontrol $quality $cutsite
+#     # cat "$datadir"/"$experiment"/outdata/chr-loc-strand-umi_q"$quality" |cut -f-5 |LC_ALL=C uniq -c | awk '{print $2,$3,$4,$5,$6,$1}' | tr " " "," > "$datadir"/"$experiment"/auxdata/aux
+#     #####
+#     cat "$datadir"/"$experiment"/outdata/_q"$quality".bed | cut -f-5 |LC_ALL=C uniq -c | awk '{print $2,$3,$4,$5,$6,$1}' | tr " " "," > "$datadir"/"$experiment"/auxdata/aux
+# fi
 
-if [ "$genome" = "mm9" ]; then
-    cat "$datadir"/"$experiment"/outdata/_q"$quality".bed | cut -f-5 |LC_ALL=C uniq -c | awk '{print $2,$3,$4,$5,$6,$1}' | tr " " "," > "$datadir"/"$experiment"/auxdata/aux
-fi
+# if [ "$genome" = "mm9" ]; then
+#     cat "$datadir"/"$experiment"/outdata/_q"$quality".bed | cut -f-5 |LC_ALL=C uniq -c | awk '{print $2,$3,$4,$5,$6,$1}' | tr " " "," > "$datadir"/"$experiment"/auxdata/aux
+# fi
+cat "$datadir"/"$experiment"/outdata/_q"$quality".bed | cut -f-5 |LC_ALL=C uniq -c | awk '{print $2,$3,$4,$5,$6,$1}' | tr " " "," > "$datadir"/"$experiment"/auxdata/aux
 
 #####UMI filtering
 cp "$datadir"/"$experiment"/auxdata/aux "$datadir"/"$experiment"/outdata/pre_umi_filtering.csv
