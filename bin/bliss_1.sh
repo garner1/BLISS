@@ -9,7 +9,8 @@ experiment=$1			# e.i. rm31,32,34,35,50,51,53 corresponding to *$experiment*R{1,
 genome=$2			# e.i. mm9 or hg19
 patfile=$3			# is the pattern file
 quality=$4			# mapping quality
-cutsite=$5			
+fastqDir=$5			# full path to directory with fastq file
+cutsite=$6			
 numbproc=32
 ################################################################################
 # PREPARE DIRECTORY STRUCTURE
@@ -25,7 +26,8 @@ refgen=$HOME/igv/genomes/$genome.fasta
 ################################################################################
 # LOAD DATA FILES
 
-find /media/bicroserver-seq/BICRO25/TK32 -maxdepth 1 -type f -iname "*$experiment*.fastq.gz" | sort > filelist_"$experiment"
+find $fastqDir -maxdepth 1 -type f -iname "*$experiment*.fastq.gz" | sort > filelist_"$experiment"
+# find /media/bicroserver-seq/BICRO25/TK32 -maxdepth 1 -type f -iname "*$experiment*.fastq.gz" | sort > filelist_"$experiment"
 # find /media/bicroserver_2-seq/BICRO51/BICRO51-49603554/BB54-59297303 -maxdepth 1 -type f -iname "*$experiment*" | sort > filelist_"$experiment"
 # find /media/bicroserver_2-seq/BICRO54/FASTQ/BICRO54-52989938/FASTQ_Generation_2017-11-15_03_56_36Z-60257939 -maxdepth 1 -type f -iname "*$experiment*" | sort > filelist_"$experiment"
 # find /media/bicroserver_2-seq/BICRO47/BICRO47-FASTQsBasespace -maxdepth 1 -type f -iname "*$experiment*" | sort > filelist_"$experiment"
@@ -42,7 +44,7 @@ if [ $numb_of_files == 2 ]; then
 fi
 rm filelist_"$experiment"
 # ################################################################################
-# # "$bin"/module/quality_control.sh $numb_of_files $numbproc $out $r1 $r2 
+"$bin"/module/quality_control.sh $numb_of_files $numbproc $out $r1 $r2 
 "$bin"/module/prepare_files.sh  $r1 $in $numb_of_files $r2
 # ################################################################################
 "$bin"/module/pattern_filtering.sh $in $outcontrol $out $patfile $cutsite
