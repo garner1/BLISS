@@ -37,7 +37,7 @@ if [ $numb_of_files == 2 ]; then
 fi
 rm filelist_"$experiment"
 # ################################################################################
-"$bin"/module/quality_control.sh $numb_of_files $numbproc $out $r1 $r2 
+# "$bin"/module/quality_control.sh $numb_of_files $numbproc $out $r1 $r2 
 "$bin"/module/prepare_files.sh  $r1 $in $numb_of_files $r2
 # ################################################################################
 "$bin"/module/pattern_filtering.sh $in $outcontrol $out $patfile $cutsite
