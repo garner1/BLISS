@@ -62,10 +62,10 @@ fi
 sed -i.bak 's/chr23/chrX/' "$datadir"/"$experiment"/outdata/q"$quality"_chr-loc-countDifferentUMI.bed
 sed -i.bak 's/chr24/chrY/' "$datadir"/"$experiment"/outdata/q"$quality"_chr-loc-countDifferentUMI.bed
 
-echo "Number of fragments:" > "$datadir"/"$experiment"/outdata/summary.txt
-wc -l "$datadir"/"$experiment"/indata/r1oneline.fa >> "$datadir"/"$experiment"/outdata/summary.txt
-echo "Number of fragment with prefix:" >> "$datadir"/"$experiment"/outdata/summary.txt
-cat "$datadir"/"$experiment"/outdata/*filtered* | paste - - | wc -l >> "$datadir"/"$experiment"/outdata/summary.txt
+# echo "Number of fragments:" > "$datadir"/"$experiment"/outdata/summary.txt
+# wc -l "$datadir"/"$experiment"/indata/r1oneline.fa >> "$datadir"/"$experiment"/outdata/summary.txt
+# echo "Number of fragment with prefix:" >> "$datadir"/"$experiment"/outdata/summary.txt
+# cat "$datadir"/"$experiment"/outdata/*filtered* | paste - - | wc -l >> "$datadir"/"$experiment"/outdata/summary.txt
 echo "Alignment statistics:" >> "$datadir"/"$experiment"/outdata/summary.txt
 samtools flagstat "$datadir"/"$experiment"/outdata/*.sam >> "$datadir"/"$experiment"/outdata/summary.txt
 echo "Number of left and right cuts:" >> "$datadir"/"$experiment"/outdata/summary.txt
