@@ -1,5 +1,184 @@
 #!/usr/bin/env bash
 
+
+# run=BICRO59
+# barcode=TGATGCGC
+# code=BB67
+# exp="$code"
+# bash bliss_1.sh "$exp" mm10 ../patterns/*"$code"_*_"$barcode" 5 /media/bicroserver_2-seq/BICRO59/BICRO59/FASTQ
+# mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+# mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+
+# run=BICRO59
+# barcode=CATCAATC
+# code=BB67
+# exp="$code"
+# ./bliss_2.sh "$exp" mm10 ../patterns/*"$code"_*_"$barcode" 5 /media/bicroserver_2-seq/BICRO59/BICRO59/FASTQ
+# mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+# mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+
+# run=BICRO59
+# barcode=GTCGTATC
+# code=BB67
+# exp="$code"
+# ./bliss_2.sh "$exp" mm10 ../patterns/*"$code"_*_"$barcode" 5 /media/bicroserver_2-seq/BICRO59/BICRO59/FASTQ
+# mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+# mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+
+# run=BICRO59
+# barcode=CATCACGC
+# code=BB68
+# exp="$code"
+# ./bliss_1.sh "$exp" mm10 ../patterns/*"$code"_*_"$barcode" 5 /media/bicroserver_2-seq/BICRO59/BICRO59/FASTQ
+# mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+# mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+
+# run=BICRO59
+# barcode=CATCACGC
+# code=BB69
+# exp="$code"
+# ./bliss_1.sh "$exp" mm10 ../patterns/*"$code"_*_"$barcode" 5 /media/bicroserver_2-seq/BICRO59/BICRO59/FASTQ
+# mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+# mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+
+# run=BICRO59
+# barcode=GTCGTCGC
+# code=BB70
+# exp="$code"
+# ./bliss_1.sh "$exp" mm10 ../patterns/*"$code"_*_"$barcode" 5 /media/bicroserver_2-seq/BICRO59/BICRO59/FASTQ
+# mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+# mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+
+# run=BICRO59
+# barcode=ACGACCGC
+# code=BB70
+# exp="$code"
+# ./bliss_2.sh "$exp" mm10 ../patterns/*"$code"_*_"$barcode" 5 /media/bicroserver_2-seq/BICRO59/BICRO59/FASTQ
+# mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+# mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+
+# run=BICRO59
+# barcode=TGATGCGC
+# code=BB70
+# exp="$code"
+# ./bliss_2.sh "$exp" mm10 ../patterns/*"$code"_*_"$barcode" 5 /media/bicroserver_2-seq/BICRO59/BICRO59/FASTQ
+# mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+# mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+
+# run=BICRO59
+# barcode=CATCACGC
+# code=BB71
+# exp="$code"
+# ./bliss_1.sh "$exp" mm10 ../patterns/*"$code"_*_"$barcode" 5 /media/bicroserver_2-seq/BICRO59/BICRO59/FASTQ
+# mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+# mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+
+# run=BICRO59
+# barcode=GTCGTCGC
+# code=BB72
+# exp="$code"
+# ./bliss_1.sh "$exp" mm10 ../patterns/*"$code"_*_"$barcode" 5 /media/bicroserver_2-seq/BICRO59/BICRO59/FASTQ
+# mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+# mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+
+# run=BICRO59
+# barcode=ACGACCGC
+# code=BB72
+# exp="$code"
+# ./bliss_2.sh "$exp" mm10 ../patterns/*"$code"_*_"$barcode" 5 /media/bicroserver_2-seq/BICRO59/BICRO59/FASTQ
+# mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+# mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+
+# run=BICRO59
+# barcode=TGATGCGC
+# code=BB72
+# exp="$code"
+# ./bliss_2.sh "$exp" mm10 ../patterns/*"$code"_*_"$barcode" 5 /media/bicroserver_2-seq/BICRO59/BICRO59/FASTQ
+# mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+# mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+
+# run=BICRO59
+# barcode=ACGACATC
+# code=BB73
+# exp="$code"
+# ./bliss_1.sh "$exp" mm10 ../patterns/*"$code"_*_"$barcode" 5 /media/bicroserver_2-seq/BICRO59/BICRO59/FASTQ
+# mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+# mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+
+# run=BICRO59
+# barcode=TGATGATC
+# code=BB73
+# exp="$code"
+# ./bliss_2.sh "$exp" mm10 ../patterns/*"$code"_*_"$barcode" 5 /media/bicroserver_2-seq/BICRO59/BICRO59/FASTQ
+# mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+# mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+
+# run=BICRO59
+# barcode=CATCATCC
+# code=BB73
+# exp="$code"
+# ./bliss_2.sh "$exp" mm10 ../patterns/*"$code"_*_"$barcode" 5 /media/bicroserver_2-seq/BICRO59/BICRO59/FASTQ
+# mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+# mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+
+# run=BICRO59
+# barcode=GTCGTTCC
+# code=BB73
+# exp="$code"
+# ./bliss_2.sh "$exp" mm10 ../patterns/*"$code"_*_"$barcode" 5 /media/bicroserver_2-seq/BICRO59/BICRO59/FASTQ
+# mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+# mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+
+# run=BICRO59
+# barcode=TGATGATC
+# code=BB74
+# exp="$code"
+# ./bliss_1.sh "$exp" mm10 ../patterns/*"$code"_*_"$barcode" 5 /media/bicroserver_2-seq/BICRO59/BICRO59/FASTQ
+# mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+# mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+
+# run=BICRO59
+# barcode=CATCATCC
+# code=BB74
+# exp="$code"
+# ./bliss_2.sh "$exp" mm10 ../patterns/*"$code"_*_"$barcode" 5 /media/bicroserver_2-seq/BICRO59/BICRO59/FASTQ
+# mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+# mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+
+# run=BICRO59
+# barcode=GTCGTTCC
+# code=BB74
+# exp="$code"
+# ./bliss_2.sh "$exp" mm10 ../patterns/*"$code"_*_"$barcode" 5 /media/bicroserver_2-seq/BICRO59/BICRO59/FASTQ
+# mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+# mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+
+# run=BICRO59
+# barcode=CATCACGC
+# code=BB75
+# exp="$code"
+# ./bliss_1.sh "$exp" mm10 ../patterns/*"$code"_*_"$barcode" 5 /media/bicroserver_2-seq/BICRO59/BICRO59/FASTQ
+# mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+# mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+
+# run=BICRO59
+# barcode=GTCGTCGC
+# code=BB75
+# exp="$code"
+# ./bliss_2.sh "$exp" mm10 ../patterns/*"$code"_*_"$barcode" 5 /media/bicroserver_2-seq/BICRO59/BICRO59/FASTQ
+# mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+# mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+
+# run=BICRO59
+# barcode=ACGACCGC
+# code=BB75
+# exp="$code"
+# ./bliss_2.sh "$exp" mm10 ../patterns/*"$code"_*_"$barcode" 5 /media/bicroserver_2-seq/BICRO59/BICRO59/FASTQ
+# mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+# mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+
+
+##########################################################################
 # barcode=CATCACGC
 # code=BB63
 # run=IMB03
@@ -120,13 +299,13 @@
 # mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
 # mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
 
-barcode=TGATGATC
-code=BB66
-run=IMB04
-exp="$run"_"$code"
-./bliss_2.sh "$exp" hg19 ../patterns/*"$code"_*_"$barcode" 30 /media/bicroserver_2-seq/COLLABORATIONS/IMB04/fastq
-mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
-mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+# barcode=TGATGATC
+# code=BB66
+# run=IMB04
+# exp="$run"_"$code"
+# ./bliss_2.sh "$exp" hg19 ../patterns/*"$code"_*_"$barcode" 30 /media/bicroserver_2-seq/COLLABORATIONS/IMB04/fastq
+# mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+# mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
 
 
 ##################################################################################
