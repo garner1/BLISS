@@ -36,10 +36,10 @@ if [ $numb_of_files == 2 ]; then
     echo "R2 is " $r2
 fi
 rm filelist_"$experiment"
-# ################################################################################
-# "$bin"/module/quality_control.sh $numb_of_files $numbproc $out $r1 $r2 
+################################################################################
+"$bin"/module/quality_control.sh $numb_of_files $numbproc $out $r1 $r2 
 "$bin"/module/prepare_files.sh  $r1 $in $numb_of_files $r2
-# ################################################################################
+################################################################################
 "$bin"/module/pattern_filtering.sh $in $outcontrol $out $patfile $cutsite
 "$bin"/module/prepare_for_mapping.sh $numb_of_files $out $aux $outcontrol $auxcontrol $in $cutsite
 "$bin"/module/mapping.sh $numb_of_files $numbproc $refgen $aux $out $experiment 
