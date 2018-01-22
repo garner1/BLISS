@@ -11,7 +11,7 @@ cutsite=$8
 echo 'Selecting unique UMIs'
 if [[ -z "$cutsite" && $numb_of_files == 1 ]]; then # IF THERE IS NO ENZYME && WITH SE READS
     bedtools bamtobed -i $out/$experiment.q$quality.bam | awk '$6 == "+"' | awk '{OFS="\t";print $4,$1,$2,"+"}' > $aux/forward & pid1=$! # if + strand DSB location is the second field
-    bedtools bamtobed -i $out/$experiment.q$quality.bam | awk '$6 == "-"' | awk '{OFS="\t";print $4,$1,$3,"-"}' > $aux/reverse & pid1=$! # if - strand DSB location is the third field
+    bedtools bamtobed -i $out/$experiment.q$quality.bam | awk '$6 == "-"' | awk '{OFS="\t";print $4,$1,$3,"-"}' > $aux/reverse & pid2=$! # if - strand DSB location is the third field
     wait $pid1
     wait $pid2
     cat $aux/forward $aux/reverse | LC_ALL=C sort --parallel=8 --temporary-directory=$HOME/tmp -k1,1 > $aux/id.chr.loc.strand & pid1=$!
