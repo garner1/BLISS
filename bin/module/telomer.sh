@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-filename=$1			# fasta file
-pattern_file=$2
-out_dir=$3
+filename=$1			# input fasta file
+pattern_file=$2			# pattern file for scan_for_matches
+out_dir=$3			# dir where to store output from scan_for_matches
 
 mkdir -p $out_dir
 
