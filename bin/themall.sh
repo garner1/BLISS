@@ -81,29 +81,29 @@
 # mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
 # mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
 
-run=BICRO61
-barcode=CATCACGC
-code=BB81
-exp="$code"
-bash bliss.sh "$exp" hg19 ../patterns/"$code"_*_"$barcode" 30 /media/bicroserver_2-seq/BICRO61/BICRO61-62826764/FASTQ
-mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
-mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+# run=BICRO61
+# barcode=CATCACGC
+# code=BB81
+# exp="$code"
+# bash bliss.sh "$exp" hg19 ../patterns/"$code"_*_"$barcode" 30 /media/bicroserver_2-seq/BICRO61/BICRO61-62826764/FASTQ
+# mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+# mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
 
-run=BICRO61
-barcode=GTCGTCGC
-code=BB81
-exp="$code"
-bash bliss.sh "$exp" hg19 ../patterns/"$code"_*_"$barcode" 30 /media/bicroserver_2-seq/BICRO61/BICRO61-62826764/FASTQ
-mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
-mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+# run=BICRO61
+# barcode=GTCGTCGC
+# code=BB81
+# exp="$code"
+# bash bliss.sh "$exp" hg19 ../patterns/"$code"_*_"$barcode" 30 /media/bicroserver_2-seq/BICRO61/BICRO61-62826764/FASTQ
+# mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+# mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
 
-run=BICRO61
-barcode=TGATGCGC
-code=BB81
-exp="$code"
-bash bliss.sh "$exp" hg19 ../patterns/"$code"_*_"$barcode" 30 /media/bicroserver_2-seq/BICRO61/BICRO61-62826764/FASTQ
-mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
-mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+# run=BICRO61
+# barcode=TGATGCGC
+# code=BB81
+# exp="$code"
+# bash bliss.sh "$exp" hg19 ../patterns/"$code"_*_"$barcode" 30 /media/bicroserver_2-seq/BICRO61/BICRO61-62826764/FASTQ
+# mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+# mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
 
 
 ###########################################################################################
