@@ -1,6 +1,64 @@
 #!/usr/bin/env bash
 
 
+barcode=GTCGTAGC
+code=L17
+exp="$code"
+bash bliss.sh "$exp" hg19 ../patterns/"$code"_"$barcode" 10 /media/bicroserver-seq/Collaborations/Zhang_lab/bioarchive_submission_bliss_NatComm
+mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+
+# barcode=ACGACAGC                                                                                                                                                                 
+# code=L18                                                                                                                                                                                              
+# exp="$code"                                                                                                                                                                                   
+# bash bliss.sh "$exp" hg19 ../patterns/"$code"_"$barcode" 10 /media/bicroserver-seq/Collaborations/Zhang_lab/bioarchive_submission_bliss_NatComm                                                    
+# mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"                                                                                
+# mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+
+# barcode=GTCGTAGC                                                                                                                                                                             
+# code=L19                                                                                                                                                                                        
+# exp="$code"                                                                                                                                                                                      
+# bash bliss.sh "$exp" hg19 ../patterns/"$code"_"$barcode" 10 /media/bicroserver-seq/Collaborations/Zhang_lab/bioarchive_submission_bliss_NatComm                                                       
+# mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"                                                                                                                                                   
+# mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"  
+
+# barcode=ACGACAGC                                                                                                                                                                            
+# code=L20                                                                                                                                                                                                 
+# exp="$code"                                                                                                                                                                                               
+# bash bliss.sh "$exp" hg19 ../patterns/"$code"_"$barcode" 10 /media/bicroserver-seq/Collaborations/Zhang_lab/bioarchive_submission_bliss_NatComm                                                              
+# mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"                                                                                                                                                           
+# mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"    
+
+# barcode=GTCGTAGC                                                                                                                                                                               
+# code=L41                                                                                                                                                                                        
+# exp="$code"                                                                                                                                                                                         
+# bash bliss.sh "$exp" hg19 ../patterns/"$code"_"$barcode" 10 /media/bicroserver-seq/Collaborations/Zhang_lab/bioarchive_submission_bliss_NatComm                                                  
+# mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"                                                                                                                                               
+# mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode" 
+
+# barcode=ACGACAGC                                                                                                                                                                         
+# code=L42                                                                                                                                                                                    
+# exp="$code"                                                                                                                                                                            
+# bash bliss.sh "$exp" hg19 ../patterns/"$code"_"$barcode" 10 /media/bicroserver-seq/Collaborations/Zhang_lab/bioarchive_submission_bliss_NatComm                                              
+# mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"                                                                                                                                               
+# mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode" 
+
+# barcode=GTCGTCGC                                                                                                                                                                               
+# code=L43                                                                                                                                                                                               
+# exp="$code"                                                                                                                                                                                                
+# bash bliss.sh "$exp" hg19 ../patterns/"$code"_"$barcode" 10 /media/bicroserver-seq/Collaborations/Zhang_lab/bioarchive_submission_bliss_NatComm                                                      
+# mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"                                                                                                                                                
+# mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode" 
+
+# barcode=ACGACAGC                                                                                                                                                                                
+# code=L44                                                                                                                                                                                       
+# exp="$code"                                                                                                                                                                                           
+# bash bliss.sh "$exp" hg19 ../patterns/"$code"_"$barcode" 10 /media/bicroserver-seq/Collaborations/Zhang_lab/bioarchive_submission_bliss_NatComm                                                        
+# mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"                                                                                                                                                
+# mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+
+
+##################################################
 # run=BICRO61
 # barcode=CATCAATC
 # code=BB76
