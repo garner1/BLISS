@@ -38,7 +38,7 @@ fi
 rm filelist_"$experiment"
 ################################################################################
 if [ ! -f $in/r1oneline.fq ]; then
-    "$bin"/module/quality_control.sh $numb_of_files $numbproc $out $r1 $r2 
+    # "$bin"/module/quality_control.sh $numb_of_files $numbproc $out $r1 $r2 
     "$bin"/module/prepare_files.sh  $r1 $in $numb_of_files $r2
 fi
 "$bin"/module/pattern_filtering.sh $in $outcontrol $out $patfile $cutsite
@@ -63,10 +63,6 @@ fi
 sed -i.bak 's/chr23/chrX/' "$datadir"/"$experiment"/outdata/q"$quality"_chr-loc-countDifferentUMI.bed
 sed -i.bak 's/chr24/chrY/' "$datadir"/"$experiment"/outdata/q"$quality"_chr-loc-countDifferentUMI.bed
 
-# echo "Number of fragments:" > "$datadir"/"$experiment"/outdata/summary.txt
-# wc -l "$datadir"/"$experiment"/indata/r1oneline.fa >> "$datadir"/"$experiment"/outdata/summary.txt
-# echo "Number of fragment with prefix:" >> "$datadir"/"$experiment"/outdata/summary.txt
-# cat "$datadir"/"$experiment"/outdata/*filtered* | paste - - | wc -l >> "$datadir"/"$experiment"/outdata/summary.txt
 echo "Alignment statistics:" >> "$datadir"/"$experiment"/outdata/summary.txt
 samtools flagstat "$datadir"/"$experiment"/outdata/*.sam >> "$datadir"/"$experiment"/outdata/summary.txt
 echo "Number of left and right cuts:" >> "$datadir"/"$experiment"/outdata/summary.txt
@@ -80,4 +76,12 @@ name=`echo $patfile|rev|cut -d'/' -f1|rev`
 mv "$datadir"/"$experiment"/outdata/q"$quality"_chr-loc-strand-umi-pcr "$datadir"/"$experiment"/outdata/"$name"__q"$quality"_chr-loc-strand-umi-pcr.tsv
 mv "$datadir"/"$experiment"/outdata/q"$quality"_chr-loc-countDifferentUMI.bed "$datadir"/"$experiment"/outdata/"$name"_chr-loc-countDifferentUMI.bed
 mv "$datadir"/"$experiment"/outdata/summary.txt "$datadir"/"$experiment"/outdata/"$name"__summary.txt
+
+
+#############################################################################
+##############################################################################
+# # echo "Number of fragments:" > "$datadir"/"$experiment"/outdata/summary.txt
+# # wc -l "$datadir"/"$experiment"/indata/r1oneline.fa >> "$datadir"/"$experiment"/outdata/summary.txt
+# # echo "Number of fragment with prefix:" >> "$datadir"/"$experiment"/outdata/summary.txt
+# # cat "$datadir"/"$experiment"/outdata/*filtered* | paste - - | wc -l >> "$datadir"/"$experiment"/outdata/summary.txt
 
