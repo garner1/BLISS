@@ -1,16 +1,15 @@
 #!/usr/bin/env bash
 
-# THIS SCRIPT CAN BE CALLED AS
-# ./bliss.sh rm35 hg19 patfile quality
+# THIS SCRIPT CAN BE CALLED LIKE THIS: bash bliss.sh expName human ../patterns/expName_*_"$barcode" 30 /home/garner1/Work/dataset
 ################################################################################
 # clear
 # DEFINING VARIABLES
-experiment=$1			# e.i. rm31,32,34,35,50,51,53 corresponding to *$experiment*R{1,2}.fastq.gz
-genome=$2			# e.i. Mus or Homo
-patfile=$3			# is the pattern file
+experiment=$1			# e.i. expName found in fastq fiel name, like in expName_R1.fastq.gz
+genome=$2			# e.i. Mus or human
+patfile=$3			# is the linker pattern file
 quality=$4			# mapping quality
-fastqDir=$5			# full path to directory with fastq file
-cutsite=$6			
+fastqDir=$5			# full path to directory containing the fastq file
+cutsite=$6			# leave empty, not in use
 numbproc=32
 ################################################################################
 # PREPARE DIRECTORY STRUCTURE
