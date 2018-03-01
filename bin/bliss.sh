@@ -6,7 +6,7 @@
 # clear
 # DEFINING VARIABLES
 experiment=$1			# e.i. rm31,32,34,35,50,51,53 corresponding to *$experiment*R{1,2}.fastq.gz
-genome=$2			# e.i. mm9 or hg19
+genome=$2			# e.i. Mus or Homo
 patfile=$3			# is the pattern file
 quality=$4			# mapping quality
 fastqDir=$5			# full path to directory with fastq file
@@ -22,7 +22,7 @@ out=$datadir/$experiment/outdata && mkdir -p $out
 outcontrol=$datadir/$experiment/outdata.control && mkdir -p $outcontrol
 aux=$datadir/$experiment/auxdata && mkdir -p $aux
 auxcontrol=$datadir/$experiment/auxdata.control && mkdir -p $auxcontrol
-refgen=$HOME/igv/genomes/$genome.fasta
+refgen=$HOME/Work/genomes/$genome*.fa.gz
 ################################################################################
 # LOAD DATA FILES
 
