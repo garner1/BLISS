@@ -21,7 +21,7 @@ out=$datadir/$experiment/outdata && mkdir -p $out
 outcontrol=$datadir/$experiment/outdata.control && mkdir -p $outcontrol
 aux=$datadir/$experiment/auxdata && mkdir -p $aux
 auxcontrol=$datadir/$experiment/auxdata.control && mkdir -p $auxcontrol
-refgen=$HOME/igv/genomes/$genome.fasta
+refgen=$HOME/igv/genomes/$genome*.fa.gz
 ################################################################################
 # LOAD DATA FILES
 
