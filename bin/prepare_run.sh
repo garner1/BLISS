@@ -1,5 +1,8 @@
 #!/bin/usr/env bash
 
+# RUN AS: bash prepare_run.sh samplesheet.csv
+# head -1 samplesheet.csv as: BB78b,Caco2_Ctrl_2A,CATCAATC,Homo sapiens,5
+
 rm -f run_pipeline.sh
 
 echo "#!/bin/usr/env bash" >> run_pipeline.sh
