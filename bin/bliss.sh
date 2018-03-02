@@ -67,11 +67,3 @@ mv "$datadir"/"$experiment"/outdata/q"$quality"_chr-loc-strand-umi-pcr "$datadir
 mv "$datadir"/"$experiment"/outdata/q"$quality"_chr-loc-countDifferentUMI.bed "$datadir"/"$experiment"/outdata/"$name"_chr-loc-countDifferentUMI.bed
 mv "$datadir"/"$experiment"/outdata/summary.txt "$datadir"/"$experiment"/outdata/"$name"__summary.txt
 
-
-#############################################################################
-##############################################################################
-# # echo "Number of fragments:" > "$datadir"/"$experiment"/outdata/summary.txt
-# # wc -l "$datadir"/"$experiment"/indata/r1oneline.fa >> "$datadir"/"$experiment"/outdata/summary.txt
-# # echo "Number of fragment with prefix:" >> "$datadir"/"$experiment"/outdata/summary.txt
-# # cat "$datadir"/"$experiment"/outdata/*filtered* | paste - - | wc -l >> "$datadir"/"$experiment"/outdata/summary.txt
-
