@@ -1,8 +1,0 @@
-BB65      TK6_wt_DMSO_rp1	CATCACGC
-BB65      TK6_wt_ETO_rp1	 GTCGTCGC
-BB65      TK6_DRB_DMSO_rp1	     ACGACCGC
-BB65      TK6_DRB_ETO_rp1      TGATGCGC
-BB65      TK6_Triptolite_DMSO_rp1           CATCAATC
-BB65      TK6_Triptolite_ETO_rp1 	    GTCGTATC
-BB65      TK6_ActD_DMSO_rp1		    ACGACATC
-BB65      TK6_ActD_ETO_rp1		    TGATGATC
