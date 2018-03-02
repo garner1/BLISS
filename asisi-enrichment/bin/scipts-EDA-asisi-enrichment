@@ -1,5 +1,0 @@
-#CALCULATE 95TH PERCINTILE (TO CHECK)
-cat *_loc-t-nt-pT-pNT-pFC.txt | cut -f7 | LC_ALL=C sort -n | awk 'BEGIN{c=0} {total[c]=$1; c++;} END{print total[int(NR*0.95-0.5)]}'
-
-#HISTOGRAM APPROX DATA TO FIRST DECIMAL
-cat *_loc-t-nt-pT-pNT-pFC.txt | cut -f7 | awk '{printf "%3.1f\n", $1}' | LC_ALL=C sort -n | LC_ALL=C uniq -c | awk '{print $2,$1}' > hist
