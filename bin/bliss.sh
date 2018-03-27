@@ -21,7 +21,7 @@ out=$datadir/$experiment/outdata && mkdir -p $out
 outcontrol=$datadir/$experiment/outdata.control && mkdir -p $outcontrol
 aux=$datadir/$experiment/auxdata && mkdir -p $aux
 auxcontrol=$datadir/$experiment/auxdata.control && mkdir -p $auxcontrol
-refgen=$HOME/Work/genomes/$genome*.fa.gz
+refgen=$HOME/Work/genomes/Homo_sapiens.GRCh37.dna.primary_assembly.fa/GRCh37.fa
 ################################################################################
 # LOAD DATA FILES
 
@@ -33,6 +33,10 @@ echo "R1 is " $r1
 if [ $numb_of_files == 2 ]; then
     r2=`cat filelist_"$experiment" | tail -n1`
     echo "R2 is " $r2
+fi
+if [ $numb_of_files == 0 ]; then
+    echo "R1 does not exist "
+    exit 1
 fi
 rm filelist_"$experiment"
 ################################################################################
