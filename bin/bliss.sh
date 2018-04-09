@@ -5,7 +5,7 @@
 # clear
 # DEFINING VARIABLES
 experiment=$1			# e.i. expName found in fastq fiel name, like in expName_R1.fastq.gz
-genome=$2			# e.i. Mus or human
+genome=$2			# e.i. us or human
 patfile=$3			# is the linker pattern file
 quality=$4			# mapping quality
 fastqDir=$5			# full path to directory containing the fastq file
@@ -21,11 +21,16 @@ out=$datadir/$experiment/outdata && mkdir -p $out
 outcontrol=$datadir/$experiment/outdata.control && mkdir -p $outcontrol
 aux=$datadir/$experiment/auxdata && mkdir -p $aux
 auxcontrol=$datadir/$experiment/auxdata.control && mkdir -p $auxcontrol
-refgen=$HOME/Work/genomes/Homo_sapiens.GRCh37.dna.primary_assembly.fa/GRCh37.fa
+if [ $genome == human ]; then
+    refgen=$HOME/Work/genomes/Homo_sapiens.GRCh37.dna.primary_assembly.fa/GRCh37.fa
+fi
+if [ $genome == mus ]; then
+    refgen=$HOME/Work/genomes/Mus_musculus.GRCm38.dna.toplevel.fa.gz
+fi
 ################################################################################
 # LOAD DATA FILES
 
-find $fastqDir -maxdepth 1 -type f -iname "*$experiment*.fastq.gz" | sort > filelist_"$experiment"
+find $fastqDir -maxdepth 1 -type f -iname "$experiment.fastq.gz" | sort > filelist_"$experiment"
 
 numb_of_files=`cat filelist_"$experiment" | wc -l`
 r1=`cat filelist_"$experiment" | head -n1`

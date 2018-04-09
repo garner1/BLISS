@@ -1,11 +1,230 @@
 #!/usr/bin/env bash
 
-run=BICRO63
-barcode=ACGACATC
-code=RM118
-exp="$code"
-bash bliss.sh "$exp" human ../patterns/"$code"_*_"$barcode" 30 /home/garner1/Work/dataset
+# barcode=CATCACGC
+# code=L1
+# exp="$code"
+# bash bliss.sh "$exp" human ../patterns/"$code" 30 /home/garner1/Work/dataset/bliss
+# mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+# mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
 
+# barcode=CATCACGC
+# code=L2
+# exp="$code"
+# bash bliss.sh "$exp" human ../patterns/"$code" 30 /home/garner1/Work/dataset/bliss
+# mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+# mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+
+# barcode=CATCACGC
+# code=L3
+# exp="$code"
+# bash bliss.sh "$exp" human ../patterns/"$code" 30 /home/garner1/Work/dataset/bliss
+# mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+# mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+
+# barcode=CATCACGC
+# code=L4
+# exp="$code"
+# bash bliss.sh "$exp" human ../patterns/"$code" 30 /home/garner1/Work/dataset/bliss
+# mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+# mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+
+# barcode=CATCACGC
+# code=L5
+# exp="$code"
+# bash bliss.sh "$exp" human ../patterns/"$code"_"$barcode" 30 /home/garner1/Work/dataset/bliss
+# mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+# mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+
+# barcode=GTCGTTCC
+# code=L5
+# exp="$code"
+# bash bliss.sh "$exp" human ../patterns/"$code"_"$barcode" 30 /home/garner1/Work/dataset/bliss
+# mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+# mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+
+# barcode=TGATGATC
+# code=L5
+# exp="$code"
+# bash bliss.sh "$exp" human ../patterns/"$code"_"$barcode" 30 /home/garner1/Work/dataset/bliss
+# mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+# mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+
+# barcode=TGATGCGC
+# code=L5
+# exp="$code"
+# bash bliss.sh "$exp" human ../patterns/"$code"_"$barcode" 30 /home/garner1/Work/dataset/bliss
+# mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+# mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+
+# barcode=CATCACGC
+# code=L6
+# exp="$code"
+# bash bliss.sh "$exp" human ../patterns/"$code"_"$barcode" 30 /home/garner1/Work/dataset/bliss
+# mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+# mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+
+# barcode=GTCGTTCC
+# code=L6
+# exp="$code"
+# bash bliss.sh "$exp" human ../patterns/"$code"_"$barcode" 30 /home/garner1/Work/dataset/bliss
+# mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+# mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+
+# barcode=TGATGATC
+# code=L6
+# exp="$code"
+# bash bliss.sh "$exp" human ../patterns/"$code"_"$barcode" 30 /home/garner1/Work/dataset/bliss
+# mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+# mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+
+# barcode=TGATGCGC
+# code=L6
+# exp="$code"
+# bash bliss.sh "$exp" human ../patterns/"$code"_"$barcode" 30 /home/garner1/Work/dataset/bliss
+# mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+# mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+
+# barcode=CATCACGC
+# code=L7_NT
+# exp="$code"
+# bash bliss.sh "$exp" human ../patterns/L7_"$barcode" 30 /home/garner1/Work/dataset/bliss
+# mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+# mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+
+# barcode=TGATGCGC
+# code=L7_T
+# exp="$code"
+# bash bliss.sh "$exp" human ../patterns/L7_"$barcode" 30 /home/garner1/Work/dataset/bliss
+# mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+# mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+
+# barcode=GTCGTATC
+# code=L8
+# exp="$code"
+# bash bliss.sh "$exp" human ../patterns/"$code"_"$barcode" 30 /home/garner1/Work/dataset/bliss
+# mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+# mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+
+# barcode=GTCGTTCC
+# code=L8
+# exp="$code"
+# bash bliss.sh "$exp" human ../patterns/"$code"_"$barcode" 30 /home/garner1/Work/dataset/bliss
+# mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+# mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+
+# barcode=TGATGATC
+# code=L8
+# exp="$code"
+# bash bliss.sh "$exp" human ../patterns/"$code"_"$barcode" 30 /home/garner1/Work/dataset/bliss
+# mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+# mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+
+# barcode=ACGACATC
+# code=L9
+# exp="$code"
+# bash bliss.sh "$exp" human ../patterns/"$code"_"$barcode" 30 /home/garner1/Work/dataset/bliss
+# mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+# mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+
+# barcode=CATCAATC
+# code=L9
+# exp="$code"
+# bash bliss.sh "$exp" human ../patterns/"$code"_"$barcode" 30 /home/garner1/Work/dataset/bliss
+# mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+# mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+
+# barcode=GTCGTATC
+# code=L9
+# exp="$code"
+# bash bliss.sh "$exp" human ../patterns/"$code"_"$barcode" 30 /home/garner1/Work/dataset/bliss
+# mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+# mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+
+barcode=ACGACATC
+code=L10
+exp="$code"
+bash bliss.sh "$exp" mus ../patterns/"$code"_"$barcode" 30 /home/garner1/Work/dataset/bliss
+mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+
+barcode=GTCGTCGC
+code=L11
+exp="$code"
+bash bliss.sh "$exp" mus ../patterns/"$code"_"$barcode" 30 /home/garner1/Work/dataset/bliss
+mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+
+barcode=TGATGCGC
+code=L12
+exp="$code"
+bash bliss.sh "$exp" mus ../patterns/"$code"_"$barcode" 30 /home/garner1/Work/dataset/bliss
+mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+
+barcode=ACGACCGC
+code=L13
+exp="$code"
+bash bliss.sh "$exp" mus ../patterns/"$code"_"$barcode" 30 /home/garner1/Work/dataset/bliss
+mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+
+barcode=GTCGTCGC
+code=L14
+exp="$code"
+bash bliss.sh "$exp" mus ../patterns/"$code"_"$barcode" 30 /home/garner1/Work/dataset/bliss
+mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+
+barcode=ACGACCGC
+code=L15
+exp="$code"
+bash bliss.sh "$exp" mus ../patterns/"$code"_"$barcode" 30 /home/garner1/Work/dataset/bliss
+mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+
+barcode=CATCAATC
+code=L15
+exp="$code"
+bash bliss.sh "$exp" mus ../patterns/"$code"_"$barcode" 30 /home/garner1/Work/dataset/bliss
+mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+
+barcode=CATCATCC
+code=L15
+exp="$code"
+bash bliss.sh "$exp" mus ../patterns/"$code"_"$barcode" 30 /home/garner1/Work/dataset/bliss
+mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+
+barcode=GTCGTATC
+code=L15
+exp="$code"
+bash bliss.sh "$exp" mus ../patterns/"$code"_"$barcode" 30 /home/garner1/Work/dataset/bliss
+mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+
+barcode=GTCGTCGC
+code=L15
+exp="$code"
+bash bliss.sh "$exp" mus ../patterns/"$code"_"$barcode" 30 /home/garner1/Work/dataset/bliss
+mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+
+barcode=GTCGTTCC
+code=L15
+exp="$code"
+bash bliss.sh "$exp" mus ../patterns/"$code"_"$barcode" 30 /home/garner1/Work/dataset/bliss
+mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+
+
+
+##################################################################
+# run=BICRO63
+# barcode=ACGACATC
+# code=RM118
+# exp="$code"
+# bash bliss.sh "$exp" human ../patterns/"$code"_*_"$barcode" 30 /home/garner1/Work/dataset
 
 ##################################################################
 # run=BICRO63
