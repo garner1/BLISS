@@ -1,33 +1,36 @@
 #!/usr/bin/env bash
 
 
-barcode=GTCGTATC
-code=RM125
-exp="$code"
-bash bliss.sh "$exp" human ../patterns/"$code"_"$barcode" 30 /media/bicroserver_2-seq/BICRO74/FASTQ
-mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
-mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+time bash run_pipeline_BICRO79.sh
+time bash run_pipeline_BICRO80.sh
+##########################################
+# barcode=GTCGTATC
+# code=RM125
+# exp="$code"
+# bash bliss.sh "$exp" human ../patterns/"$code"_"$barcode" 30 /media/bicroserver_2-seq/BICRO74/FASTQ
+# mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+# mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
 
-barcode=GTCGTATC
-code=RM129
-exp="$code"
-bash bliss.sh "$exp" human ../patterns/"$code"_"$barcode" 30 /media/bicroserver_2-seq/BICRO74/FASTQ
-mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
-mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+# barcode=GTCGTATC
+# code=RM129
+# exp="$code"
+# bash bliss.sh "$exp" human ../patterns/"$code"_"$barcode" 30 /media/bicroserver_2-seq/BICRO74/FASTQ
+# mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+# mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
 
-barcode=GTCGTATC
-code=RM130
-exp="$code"
-bash bliss.sh "$exp" human ../patterns/"$code"_"$barcode" 30 /media/bicroserver_2-seq/BICRO74/FASTQ
-mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
-mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+# barcode=GTCGTATC
+# code=RM130
+# exp="$code"
+# bash bliss.sh "$exp" human ../patterns/"$code"_"$barcode" 30 /media/bicroserver_2-seq/BICRO74/FASTQ
+# mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+# mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
 
-barcode=GTCGTATC
-code=RM133
-exp="$code"
-bash bliss.sh "$exp" human ../patterns/"$code"_"$barcode" 30 /media/bicroserver_2-seq/BICRO74/FASTQ
-mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
-mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+# barcode=GTCGTATC
+# code=RM133
+# exp="$code"
+# bash bliss.sh "$exp" human ../patterns/"$code"_"$barcode" 30 /media/bicroserver_2-seq/BICRO74/FASTQ
+# mkdir -p ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
+# mv ~/Work/dataset/bliss/"$exp"/outdata/* ~/Work/dataset/bliss/"$exp"/outdata_"$barcode"
 
 ###########################################################
 # barcode=CATCACGC
