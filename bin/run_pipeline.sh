@@ -1,88 +1,88 @@
 #!/bin/usr/env bash
 
-# bash bliss.sh BB78b human ../patterns/BB78b_Caco2-Ctrl-2A_CATCAATC 30 /media/bicroserver_2-seq/BICRO66/FASTQ
-# mkdir -p /home/garner1/Work/dataset/bliss/BB78b/outdata_CATCAATC
-# mv /home/garner1/Work/dataset/bliss/BB78b/outdata/* /home/garner1/Work/dataset/bliss/BB78b/outdata_CATCAATC
+bash bliss.sh BB78b human ../patterns/BB78b_Caco2-Ctrl-2A_CATCAATC 30 /media/bicroserver_2-seq/BICRO66/FASTQ
+mkdir -p /home/garner1/Work/dataset/bliss/BB78b/outdata_CATCAATC
+mv /home/garner1/Work/dataset/bliss/BB78b/outdata/* /home/garner1/Work/dataset/bliss/BB78b/outdata_CATCAATC
 
-# bash bliss.sh BB78b human ../patterns/BB78b_Caco2-ETO-2B_GTCGTATC 30 /media/bicroserver_2-seq/BICRO66/FASTQ
-# mkdir -p /home/garner1/Work/dataset/bliss/BB78b/outdata_GTCGTATC
-# mv /home/garner1/Work/dataset/bliss/BB78b/outdata/* /home/garner1/Work/dataset/bliss/BB78b/outdata_GTCGTATC
+bash bliss.sh BB78b human ../patterns/BB78b_Caco2-ETO-2B_GTCGTATC 30 /media/bicroserver_2-seq/BICRO66/FASTQ
+mkdir -p /home/garner1/Work/dataset/bliss/BB78b/outdata_GTCGTATC
+mv /home/garner1/Work/dataset/bliss/BB78b/outdata/* /home/garner1/Work/dataset/bliss/BB78b/outdata_GTCGTATC
 
-# bash bliss.sh BB79b human ../patterns/BB79b_Caco2-EcoliWT-2C_ACGACATC 30 /media/bicroserver_2-seq/BICRO66/FASTQ
-# mkdir -p /home/garner1/Work/dataset/bliss/BB79b/outdata_ACGACATC
-# mv /home/garner1/Work/dataset/bliss/BB79b/outdata/* /home/garner1/Work/dataset/bliss/BB79b/outdata_ACGACATC
+bash bliss.sh BB79b human ../patterns/BB79b_Caco2-EcoliWT-2C_ACGACATC 30 /media/bicroserver_2-seq/BICRO66/FASTQ
+mkdir -p /home/garner1/Work/dataset/bliss/BB79b/outdata_ACGACATC
+mv /home/garner1/Work/dataset/bliss/BB79b/outdata/* /home/garner1/Work/dataset/bliss/BB79b/outdata_ACGACATC
 
-# bash bliss.sh BB79b human ../patterns/BB79b_Caco2-EcoliMut-2D_TGATGATC 30 /media/bicroserver_2-seq/BICRO66/FASTQ
-# mkdir -p /home/garner1/Work/dataset/bliss/BB79b/outdata_TGATGATC
-# mv /home/garner1/Work/dataset/bliss/BB79b/outdata/* /home/garner1/Work/dataset/bliss/BB79b/outdata_TGATGATC
+bash bliss.sh BB79b human ../patterns/BB79b_Caco2-EcoliMut-2D_TGATGATC 30 /media/bicroserver_2-seq/BICRO66/FASTQ
+mkdir -p /home/garner1/Work/dataset/bliss/BB79b/outdata_TGATGATC
+mv /home/garner1/Work/dataset/bliss/BB79b/outdata/* /home/garner1/Work/dataset/bliss/BB79b/outdata_TGATGATC
 
-# bash bliss.sh BB80b human ../patterns/BB80b_FT259-Ctrl-5A_CATCACGC 30 /media/bicroserver_2-seq/BICRO66/FASTQ
-# mkdir -p /home/garner1/Work/dataset/bliss/BB80b/outdata_CATCACGC
-# mv /home/garner1/Work/dataset/bliss/BB80b/outdata/* /home/garner1/Work/dataset/bliss/BB80b/outdata_CATCACGC
+bash bliss.sh BB80b human ../patterns/BB80b_FT259-Ctrl-5A_CATCACGC 30 /media/bicroserver_2-seq/BICRO66/FASTQ
+mkdir -p /home/garner1/Work/dataset/bliss/BB80b/outdata_CATCACGC
+mv /home/garner1/Work/dataset/bliss/BB80b/outdata/* /home/garner1/Work/dataset/bliss/BB80b/outdata_CATCACGC
 
-# bash bliss.sh BB80b human ../patterns/BB80b_FT259-ChlamTra-5C_ACGACCGC 30 /media/bicroserver_2-seq/BICRO66/FASTQ
-# mkdir -p /home/garner1/Work/dataset/bliss/BB80b/outdata_ACGACCGC
-# mv /home/garner1/Work/dataset/bliss/BB80b/outdata/* /home/garner1/Work/dataset/bliss/BB80b/outdata_ACGACCGC
+bash bliss.sh BB80b human ../patterns/BB80b_FT259-ChlamTra-5C_ACGACCGC 30 /media/bicroserver_2-seq/BICRO66/FASTQ
+mkdir -p /home/garner1/Work/dataset/bliss/BB80b/outdata_ACGACCGC
+mv /home/garner1/Work/dataset/bliss/BB80b/outdata/* /home/garner1/Work/dataset/bliss/BB80b/outdata_ACGACCGC
 
-# bash bliss.sh BB81b human ../patterns/BB81b_FT259-Ctrl-5A_CATCACGC 30 /media/bicroserver_2-seq/BICRO66/FASTQ
-# mkdir -p /home/garner1/Work/dataset/bliss/BB81b/outdata_CATCACGC
-# mv /home/garner1/Work/dataset/bliss/BB81b/outdata/* /home/garner1/Work/dataset/bliss/BB81b/outdata_CATCACGC
+bash bliss.sh BB81b human ../patterns/BB81b_FT259-Ctrl-5A_CATCACGC 30 /media/bicroserver_2-seq/BICRO66/FASTQ
+mkdir -p /home/garner1/Work/dataset/bliss/BB81b/outdata_CATCACGC
+mv /home/garner1/Work/dataset/bliss/BB81b/outdata/* /home/garner1/Work/dataset/bliss/BB81b/outdata_CATCACGC
 
-# bash bliss.sh BB81b human ../patterns/BB81b_FT259-ETO-5B_GTCGTCGC 30 /media/bicroserver_2-seq/BICRO66/FASTQ
-# mkdir -p /home/garner1/Work/dataset/bliss/BB81b/outdata_GTCGTCGC
-# mv /home/garner1/Work/dataset/bliss/BB81b/outdata/* /home/garner1/Work/dataset/bliss/BB81b/outdata_GTCGTCGC
+bash bliss.sh BB81b human ../patterns/BB81b_FT259-ETO-5B_GTCGTCGC 30 /media/bicroserver_2-seq/BICRO66/FASTQ
+mkdir -p /home/garner1/Work/dataset/bliss/BB81b/outdata_GTCGTCGC
+mv /home/garner1/Work/dataset/bliss/BB81b/outdata/* /home/garner1/Work/dataset/bliss/BB81b/outdata_GTCGTCGC
 
-# bash bliss.sh BB81b human ../patterns/BB81b_FT259-H2O2-5D_TGATGCGC 30 /media/bicroserver_2-seq/BICRO66/FASTQ
-# mkdir -p /home/garner1/Work/dataset/bliss/BB81b/outdata_TGATGCGC
-# mv /home/garner1/Work/dataset/bliss/BB81b/outdata/* /home/garner1/Work/dataset/bliss/BB81b/outdata_TGATGCGC
+bash bliss.sh BB81b human ../patterns/BB81b_FT259-H2O2-5D_TGATGCGC 30 /media/bicroserver_2-seq/BICRO66/FASTQ
+mkdir -p /home/garner1/Work/dataset/bliss/BB81b/outdata_TGATGCGC
+mv /home/garner1/Work/dataset/bliss/BB81b/outdata/* /home/garner1/Work/dataset/bliss/BB81b/outdata_TGATGCGC
 
-# bash bliss.sh BB82 human ../patterns/BB82_Caco2-Ctrl-3A_CATCAATC 30 /media/bicroserver_2-seq/BICRO66/FASTQ
-# mkdir -p /home/garner1/Work/dataset/bliss/BB82/outdata_CATCAATC
-# mv /home/garner1/Work/dataset/bliss/BB82/outdata/* /home/garner1/Work/dataset/bliss/BB82/outdata_CATCAATC
+bash bliss.sh BB82 human ../patterns/BB82_Caco2-Ctrl-3A_CATCAATC 30 /media/bicroserver_2-seq/BICRO66/FASTQ
+mkdir -p /home/garner1/Work/dataset/bliss/BB82/outdata_CATCAATC
+mv /home/garner1/Work/dataset/bliss/BB82/outdata/* /home/garner1/Work/dataset/bliss/BB82/outdata_CATCAATC
 
-# bash bliss.sh BB82 human ../patterns/BB82_Caco2-ETO-3B_GTCGTATC 30 /media/bicroserver_2-seq/BICRO66/FASTQ
-# mkdir -p /home/garner1/Work/dataset/bliss/BB82/outdata_GTCGTATC
-# mv /home/garner1/Work/dataset/bliss/BB82/outdata/* /home/garner1/Work/dataset/bliss/BB82/outdata_GTCGTATC
+bash bliss.sh BB82 human ../patterns/BB82_Caco2-ETO-3B_GTCGTATC 30 /media/bicroserver_2-seq/BICRO66/FASTQ
+mkdir -p /home/garner1/Work/dataset/bliss/BB82/outdata_GTCGTATC
+mv /home/garner1/Work/dataset/bliss/BB82/outdata/* /home/garner1/Work/dataset/bliss/BB82/outdata_GTCGTATC
 
-# bash bliss.sh BB83 human ../patterns/BB83_Caco2-EcoliWT-3C_ACGACATC 30 /media/bicroserver_2-seq/BICRO66/FASTQ
-# mkdir -p /home/garner1/Work/dataset/bliss/BB83/outdata_ACGACATC
-# mv /home/garner1/Work/dataset/bliss/BB83/outdata/* /home/garner1/Work/dataset/bliss/BB83/outdata_ACGACATC
+bash bliss.sh BB83 human ../patterns/BB83_Caco2-EcoliWT-3C_ACGACATC 30 /media/bicroserver_2-seq/BICRO66/FASTQ
+mkdir -p /home/garner1/Work/dataset/bliss/BB83/outdata_ACGACATC
+mv /home/garner1/Work/dataset/bliss/BB83/outdata/* /home/garner1/Work/dataset/bliss/BB83/outdata_ACGACATC
 
-# bash bliss.sh BB83 human ../patterns/BB83_Caco2-EcoliMut-3D_TGATGATC 30 /media/bicroserver_2-seq/BICRO66/FASTQ
-# mkdir -p /home/garner1/Work/dataset/bliss/BB83/outdata_TGATGATC
-# mv /home/garner1/Work/dataset/bliss/BB83/outdata/* /home/garner1/Work/dataset/bliss/BB83/outdata_TGATGATC
+bash bliss.sh BB83 human ../patterns/BB83_Caco2-EcoliMut-3D_TGATGATC 30 /media/bicroserver_2-seq/BICRO66/FASTQ
+mkdir -p /home/garner1/Work/dataset/bliss/BB83/outdata_TGATGATC
+mv /home/garner1/Work/dataset/bliss/BB83/outdata/* /home/garner1/Work/dataset/bliss/BB83/outdata_TGATGATC
 
-# bash bliss.sh BB84 human ../patterns/BB84_FT261-Ctrl-4A_CATCACGC 30 /media/bicroserver_2-seq/BICRO66/FASTQ
-# mkdir -p /home/garner1/Work/dataset/bliss/BB84/outdata_CATCACGC
-# mv /home/garner1/Work/dataset/bliss/BB84/outdata/* /home/garner1/Work/dataset/bliss/BB84/outdata_CATCACGC
+bash bliss.sh BB84 human ../patterns/BB84_FT261-Ctrl-4A_CATCACGC 30 /media/bicroserver_2-seq/BICRO66/FASTQ
+mkdir -p /home/garner1/Work/dataset/bliss/BB84/outdata_CATCACGC
+mv /home/garner1/Work/dataset/bliss/BB84/outdata/* /home/garner1/Work/dataset/bliss/BB84/outdata_CATCACGC
 
-# bash bliss.sh BB84 human ../patterns/BB84_FT261-ETO-4B_GTCGTCGC 30 /media/bicroserver_2-seq/BICRO66/FASTQ
-# mkdir -p /home/garner1/Work/dataset/bliss/BB84/outdata_GTCGTCGC
-# mv /home/garner1/Work/dataset/bliss/BB84/outdata/* /home/garner1/Work/dataset/bliss/BB84/outdata_GTCGTCGC
+bash bliss.sh BB84 human ../patterns/BB84_FT261-ETO-4B_GTCGTCGC 30 /media/bicroserver_2-seq/BICRO66/FASTQ
+mkdir -p /home/garner1/Work/dataset/bliss/BB84/outdata_GTCGTCGC
+mv /home/garner1/Work/dataset/bliss/BB84/outdata/* /home/garner1/Work/dataset/bliss/BB84/outdata_GTCGTCGC
 
-# bash bliss.sh BB84 human ../patterns/BB84_FT261-ChlamTra-4C_ACGACCGC 30 /media/bicroserver_2-seq/BICRO66/FASTQ
-# mkdir -p /home/garner1/Work/dataset/bliss/BB84/outdata_ACGACCGC
-# mv /home/garner1/Work/dataset/bliss/BB84/outdata/* /home/garner1/Work/dataset/bliss/BB84/outdata_ACGACCGC
+bash bliss.sh BB84 human ../patterns/BB84_FT261-ChlamTra-4C_ACGACCGC 30 /media/bicroserver_2-seq/BICRO66/FASTQ
+mkdir -p /home/garner1/Work/dataset/bliss/BB84/outdata_ACGACCGC
+mv /home/garner1/Work/dataset/bliss/BB84/outdata/* /home/garner1/Work/dataset/bliss/BB84/outdata_ACGACCGC
 
-# bash bliss.sh BB85 human ../patterns/BB85_FT271-Ctrl-6A_CATCACGC 30 /media/bicroserver_2-seq/BICRO66/FASTQ
-# mkdir -p /home/garner1/Work/dataset/bliss/BB85/outdata_CATCACGC
-# mv /home/garner1/Work/dataset/bliss/BB85/outdata/* /home/garner1/Work/dataset/bliss/BB85/outdata_CATCACGC
+bash bliss.sh BB85 human ../patterns/BB85_FT271-Ctrl-6A_CATCACGC 30 /media/bicroserver_2-seq/BICRO66/FASTQ
+mkdir -p /home/garner1/Work/dataset/bliss/BB85/outdata_CATCACGC
+mv /home/garner1/Work/dataset/bliss/BB85/outdata/* /home/garner1/Work/dataset/bliss/BB85/outdata_CATCACGC
 
-# bash bliss.sh BB85 human ../patterns/BB85_FT271-ChlamTra-6C_ACGACCGC 30 /media/bicroserver_2-seq/BICRO66/FASTQ
-# mkdir -p /home/garner1/Work/dataset/bliss/BB85/outdata_ACGACCGC
-# mv /home/garner1/Work/dataset/bliss/BB85/outdata/* /home/garner1/Work/dataset/bliss/BB85/outdata_ACGACCGC
+bash bliss.sh BB85 human ../patterns/BB85_FT271-ChlamTra-6C_ACGACCGC 30 /media/bicroserver_2-seq/BICRO66/FASTQ
+mkdir -p /home/garner1/Work/dataset/bliss/BB85/outdata_ACGACCGC
+mv /home/garner1/Work/dataset/bliss/BB85/outdata/* /home/garner1/Work/dataset/bliss/BB85/outdata_ACGACCGC
 
-# bash bliss.sh BB86 human ../patterns/BB86_FT271-Ctrl-6A_CATCACGC 30 /media/bicroserver_2-seq/BICRO66/FASTQ
-# mkdir -p /home/garner1/Work/dataset/bliss/BB86/outdata_CATCACGC
-# mv /home/garner1/Work/dataset/bliss/BB86/outdata/* /home/garner1/Work/dataset/bliss/BB86/outdata_CATCACGC
+bash bliss.sh BB86 human ../patterns/BB86_FT271-Ctrl-6A_CATCACGC 30 /media/bicroserver_2-seq/BICRO66/FASTQ
+mkdir -p /home/garner1/Work/dataset/bliss/BB86/outdata_CATCACGC
+mv /home/garner1/Work/dataset/bliss/BB86/outdata/* /home/garner1/Work/dataset/bliss/BB86/outdata_CATCACGC
 
-# bash bliss.sh BB86 human ../patterns/BB86_FT271-ETO-6B_GTCGTCGC 30 /media/bicroserver_2-seq/BICRO66/FASTQ
-# mkdir -p /home/garner1/Work/dataset/bliss/BB86/outdata_GTCGTCGC
-# mv /home/garner1/Work/dataset/bliss/BB86/outdata/* /home/garner1/Work/dataset/bliss/BB86/outdata_GTCGTCGC
+bash bliss.sh BB86 human ../patterns/BB86_FT271-ETO-6B_GTCGTCGC 30 /media/bicroserver_2-seq/BICRO66/FASTQ
+mkdir -p /home/garner1/Work/dataset/bliss/BB86/outdata_GTCGTCGC
+mv /home/garner1/Work/dataset/bliss/BB86/outdata/* /home/garner1/Work/dataset/bliss/BB86/outdata_GTCGTCGC
 
-# bash bliss.sh BB86 human ../patterns/BB86_FT271-H2O2-6D_TGATGCGC 30 /media/bicroserver_2-seq/BICRO66/FASTQ
-# mkdir -p /home/garner1/Work/dataset/bliss/BB86/outdata_TGATGCGC
-# mv /home/garner1/Work/dataset/bliss/BB86/outdata/* /home/garner1/Work/dataset/bliss/BB86/outdata_TGATGCGC
+bash bliss.sh BB86 human ../patterns/BB86_FT271-H2O2-6D_TGATGCGC 30 /media/bicroserver_2-seq/BICRO66/FASTQ
+mkdir -p /home/garner1/Work/dataset/bliss/BB86/outdata_TGATGCGC
+mv /home/garner1/Work/dataset/bliss/BB86/outdata/* /home/garner1/Work/dataset/bliss/BB86/outdata_TGATGCGC
 
 bash bliss.sh BB89 human ../patterns/BB89_Cali-D8-HF-rp1_TGATGATC 30 /media/bicroserver_2-seq/BICRO66/FASTQ
 mkdir -p /home/garner1/Work/dataset/bliss/BB89/outdata_TGATGATC
