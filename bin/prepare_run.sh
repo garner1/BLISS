@@ -14,8 +14,7 @@ echo >> run_pipeline_$run.sh
 
 while read -r line; do
     code=`echo $line|cut -d',' -f1`
-    # barcode=`echo $line|cut -d',' -f3`
-    barcode=TGATGATC
+    barcode=`echo $line|cut -d',' -f3`
     echo bash bliss.sh "$code" human ../patterns/"$code"_*_"$barcode" 30 "$dir" >> run_pipeline_$run.sh
     echo mkdir -p ~/Work/dataset/bliss/"$code"/outdata_"$barcode" >> run_pipeline_$run.sh
     echo mv ~/Work/dataset/bliss/"$code"/outdata/* ~/Work/dataset/bliss/"$code"/outdata_"$barcode" >> run_pipeline_$run.sh
