@@ -4,9 +4,9 @@
 # head -1 samplesheet.csv as: BB78b,Caco2_Ctrl_2A,CATCAATC,Homo sapiens,5
 
 inputfile=$1
-run=$2       # BICRO66
-dir=/media/bicroserver_2-seq/$run/FASTQ
-
+dir=/home/garner1/Work/dataset/bliss
+# dir=/media/bicroserver_2-seq/$run/FASTQ
+run=X
 rm -f run_pipeline_$run.sh
 
 echo "#!/bin/usr/env bash" >> run_pipeline_$run.sh
@@ -20,5 +20,4 @@ while read -r line; do
     echo mv ~/Work/dataset/bliss/"$code"/outdata/* ~/Work/dataset/bliss/"$code"/outdata_"$barcode" >> run_pipeline_$run.sh
     echo >> run_pipeline_$run.sh
 done < $inputfile
-
 chmod +x run_pipeline_$run.sh

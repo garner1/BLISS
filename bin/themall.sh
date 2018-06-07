@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 
 
-time bash run_pipeline_BICRO79.sh
-time bash run_pipeline_BICRO80.sh
+bash run_pipeline_BICRO81+85.sh
+bash run_pipeline_BICRO85+90.sh
+bash run_pipeline_BICRO90+93.sh
 ##########################################
 # barcode=GTCGTATC
 # code=RM125
