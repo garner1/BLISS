@@ -4,7 +4,7 @@
 ################################################################################
 # clear
 # DEFINING VARIABLES
-experiment=$1			# e.i. expName found in fastq fiel name, like in expName_R1.fastq.gz
+experiment=$1			# e.i. expName found in fastq file name, like in expName_R1.fastq.gz
 genome=$2			# e.i. Mus or human
 patfile=$3			# is the linker pattern file
 quality=$4			# mapping quality

@@ -1,6 +1,6 @@
 #!/bin/usr/env bash
 
-# RUN AS: bash prepare_run.sh samplesheet.csv
+# RUN AS: bash prepare_run.sh samplesheet.csv BICRO??? path_to_FASTQ
 # head -1 samplesheet.csv as: BB78b,Caco2_Ctrl_2A,CATCAATC,Homo sapiens,5
 
 rm -f run_pipeline.sh
@@ -9,8 +9,8 @@ echo "#!/bin/usr/env bash" >> run_pipeline.sh
 echo >> run_pipeline.sh
 
 inputfile=$1
-run=BICRO66
-dir=/media/bicroserver_2-seq/BICRO66/FASTQ
+run=$2
+dir=$3
 
 while read -r line; do
     code=`echo $line|cut -d',' -f1`
