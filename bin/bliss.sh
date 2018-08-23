@@ -53,26 +53,21 @@ fi
 "$bin"/module/prepare_for_mapping.sh $numb_of_files $out $aux $outcontrol $auxcontrol $in $cutsite
 "$bin"/module/mapping.sh $numb_of_files $numbproc $refgen $aux $out $experiment 
 "$bin"/module/mapping_quality.sh $numb_of_files $out $experiment $outcontrol $quality $cutsite
-"$bin"/module/umi_joining.sh $numb_of_files $out $experiment $aux $outcontrol $auxcontrol $quality $cutsite
-cat "$datadir"/"$experiment"/outdata/_q"$quality".bed | cut -f-5 |LC_ALL=C uniq -c | awk '{print $2,$3,$4,$5,$6,$1}' | tr " " "," > "$datadir"/"$experiment"/auxdata/aux
-#####UMI filtering
-cp "$datadir"/"$experiment"/auxdata/aux "$datadir"/"$experiment"/outdata/pre_umi_filtering.csv
+umi_tools dedup -I "$out"/${experiment}.q30.sorted.bam -S "$out"/${experiment}.deduplicated.bam --edit-distance-threshold 2 -L "$out"/${experiment}.group.log # first dedup of reads not at cutsite
+bam2bed < ${out}/${experiment}.deduplicated.bam | cut -f-17 > ${out}/${experiment}.deduplicated.bed # convert using bedops bam2bed
+# #####UMI filtering
 
-"$bin"/module/umi_filter_1.sh "$datadir"/"$experiment"/outdata/pre_umi_filtering.csv "$datadir"/"$experiment"/outdata/q"$quality"_aux
-"$bin"/module/umi_filter_2.sh "$datadir"/"$experiment"/outdata/q"$quality"_aux "$datadir"/"$experiment"/outdata/q"$quality"_chr-loc-strand-umi-pcr
-"$bin"/module/umi_filter_3.sh "$datadir"/"$experiment"/outdata/q"$quality"_chr-loc-strand-umi-pcr  "$datadir"/"$experiment"/outdata/q"$quality"_chr-loc-countDifferentUMI.bed
+# echo "Alignment statistics:" >> "$datadir"/"$experiment"/outdata/summary.txt
+# samtools flagstat "$datadir"/"$experiment"/outdata/*.sam >> "$datadir"/"$experiment"/outdata/summary.txt
+# echo "Number of left and right cuts:" >> "$datadir"/"$experiment"/outdata/summary.txt
+# cat "$datadir"/"$experiment"/outdata/q"$quality"_chr-loc-strand-umi-pcr | grep -v "_" | cut -f4 | sort | uniq -c >> "$datadir"/"$experiment"/outdata/summary.txt
+# echo "Number of DSB locations:" >> "$datadir"/"$experiment"/outdata/summary.txt
+# cat "$datadir"/"$experiment"/outdata/q"$quality"_chr-loc-countDifferentUMI.bed | grep -v "_" | wc -l >> "$datadir"/"$experiment"/outdata/summary.txt
+# echo "Number of UMIs:" >> "$datadir"/"$experiment"/outdata/summary.txt
+# cat "$datadir"/"$experiment"/outdata/q"$quality"_chr-loc-strand-umi-pcr | grep -v "_" | wc -l >> "$datadir"/"$experiment"/outdata/summary.txt
 
-echo "Alignment statistics:" >> "$datadir"/"$experiment"/outdata/summary.txt
-samtools flagstat "$datadir"/"$experiment"/outdata/*.sam >> "$datadir"/"$experiment"/outdata/summary.txt
-echo "Number of left and right cuts:" >> "$datadir"/"$experiment"/outdata/summary.txt
-cat "$datadir"/"$experiment"/outdata/q"$quality"_chr-loc-strand-umi-pcr | grep -v "_" | cut -f4 | sort | uniq -c >> "$datadir"/"$experiment"/outdata/summary.txt
-echo "Number of DSB locations:" >> "$datadir"/"$experiment"/outdata/summary.txt
-cat "$datadir"/"$experiment"/outdata/q"$quality"_chr-loc-countDifferentUMI.bed | grep -v "_" | wc -l >> "$datadir"/"$experiment"/outdata/summary.txt
-echo "Number of UMIs:" >> "$datadir"/"$experiment"/outdata/summary.txt
-cat "$datadir"/"$experiment"/outdata/q"$quality"_chr-loc-strand-umi-pcr | grep -v "_" | wc -l >> "$datadir"/"$experiment"/outdata/summary.txt
-
-name=`echo $patfile|rev|cut -d'/' -f1|rev`
-mv "$datadir"/"$experiment"/outdata/q"$quality"_chr-loc-strand-umi-pcr "$datadir"/"$experiment"/outdata/"$name"__q"$quality"_chr-loc-strand-umi-pcr.tsv
-mv "$datadir"/"$experiment"/outdata/q"$quality"_chr-loc-countDifferentUMI.bed "$datadir"/"$experiment"/outdata/"$name"_chr-loc-countDifferentUMI.bed
-mv "$datadir"/"$experiment"/outdata/summary.txt "$datadir"/"$experiment"/outdata/"$name"__summary.txt
+# name=`echo $patfile|rev|cut -d'/' -f1|rev`
+# mv "$datadir"/"$experiment"/outdata/q"$quality"_chr-loc-strand-umi-pcr "$datadir"/"$experiment"/outdata/"$name"__q"$quality"_chr-loc-strand-umi-pcr.tsv
+# mv "$datadir"/"$experiment"/outdata/q"$quality"_chr-loc-countDifferentUMI.bed "$datadir"/"$experiment"/outdata/"$name"_chr-loc-countDifferentUMI.bed
+# mv "$datadir"/"$experiment"/outdata/summary.txt "$datadir"/"$experiment"/outdata/"$name"__summary.txt
 
