@@ -10,7 +10,7 @@ patfile=$3			# is the linker pattern file
 quality=$4			# mapping quality
 fastqDir=$5			# full path to directory containing the fastq file
 cutsite=$6			# leave empty, not in use
-numbproc=32
+numbproc=24
 ################################################################################
 # PREPARE DIRECTORY STRUCTURE
 datadir=$HOME/Work/dataset/bliss && mkdir -p $datadir/$experiment
