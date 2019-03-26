@@ -4,13 +4,18 @@
 ################################################################################
 # clear
 # DEFINING VARIABLES
+<<<<<<< HEAD
 experiment=$1			# e.i. expName found in fastq file name, like in expName_R1.fastq.gz
 genome=$2			# e.i. Mus or human
+=======
+experiment=$1			# e.i. expName found in fastq fiel name, like in expName_R1.fastq.gz
+genome=$2			# e.i. us or human
+>>>>>>> development
 patfile=$3			# is the linker pattern file
 quality=$4			# mapping quality
 fastqDir=$5			# full path to directory containing the fastq file
 cutsite=$6			# leave empty, not in use
-numbproc=32
+numbproc=24
 ################################################################################
 # PREPARE DIRECTORY STRUCTURE
 datadir=$HOME/Work/dataset/bliss && mkdir -p $datadir/$experiment
@@ -21,11 +26,16 @@ out=$datadir/$experiment/outdata && mkdir -p $out
 outcontrol=$datadir/$experiment/outdata.control && mkdir -p $outcontrol
 aux=$datadir/$experiment/auxdata && mkdir -p $aux
 auxcontrol=$datadir/$experiment/auxdata.control && mkdir -p $auxcontrol
-refgen=$HOME/Work/genomes/$genome*.fa.gz
+if [ $genome == human ]; then
+    refgen=$HOME/Work/genomes/Homo_sapiens.GRCh37.dna.primary_assembly.fa/GRCh37.fa
+fi
+if [ $genome == mus ]; then
+    refgen=$HOME/Work/genomes/Mus_musculus.GRCm38.dna.toplevel.fa.gz
+fi
 ################################################################################
 # LOAD DATA FILES
 
-find $fastqDir -maxdepth 1 -type f -iname "*$experiment*.fastq.gz" | sort > filelist_"$experiment"
+find $fastqDir -maxdepth 1 -type f -iname "$experiment.fastq.gz" | sort > filelist_"$experiment"
 
 numb_of_files=`cat filelist_"$experiment" | wc -l`
 r1=`cat filelist_"$experiment" | head -n1`
@@ -33,6 +43,10 @@ echo "R1 is " $r1
 if [ $numb_of_files == 2 ]; then
     r2=`cat filelist_"$experiment" | tail -n1`
     echo "R2 is " $r2
+fi
+if [ $numb_of_files == 0 ]; then
+    echo "R1 does not exist "
+    exit 1
 fi
 rm filelist_"$experiment"
 ################################################################################
