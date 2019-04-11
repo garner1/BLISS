@@ -45,16 +45,16 @@ if [ $numb_of_files == 0 ]; then
 fi
 rm filelist_"$experiment"
 ################################################################################
-# if [ ! -f $in/r1oneline.fq ]; then
-#     # "$bin"/module/quality_control.sh $numb_of_files $numbproc $out $r1 $r2 
-#     "$bin"/module/prepare_files.sh  $r1 $in $numb_of_files $r2
-# fi
-# "$bin"/module/pattern_filtering.sh $in $outcontrol $out $patfile $cutsite
-# "$bin"/module/prepare_for_mapping.sh $numb_of_files $out $aux $outcontrol $auxcontrol $in $cutsite
-# "$bin"/module/mapping.sh $numb_of_files $numbproc $refgen $aux $out $experiment 
-# "$bin"/module/mapping_quality.sh $numb_of_files $out $experiment $outcontrol $quality $cutsite
-# "$bin"/module/umi_joining.sh $numb_of_files $out $experiment $aux $outcontrol $auxcontrol $quality $cutsite
-# cat "$datadir"/"$experiment"/outdata/_q"$quality".bed | cut -f-5 |LC_ALL=C uniq -c | awk '{print $2,$3,$4,$5,$6,$1}' | tr " " "," > "$datadir"/"$experiment"/auxdata/aux
+if [ ! -f $in/r1oneline.fq ]; then
+    # "$bin"/module/quality_control.sh $numb_of_files $numbproc $out $r1 $r2 
+    "$bin"/module/prepare_files.sh  $r1 $in $numb_of_files $r2
+fi
+"$bin"/module/pattern_filtering.sh $in $outcontrol $out $patfile $cutsite
+"$bin"/module/prepare_for_mapping.sh $numb_of_files $out $aux $outcontrol $auxcontrol $in $cutsite
+"$bin"/module/mapping.sh $numb_of_files $numbproc $refgen $aux $out $experiment 
+"$bin"/module/mapping_quality.sh $numb_of_files $out $experiment $outcontrol $quality $cutsite
+"$bin"/module/umi_joining.sh $numb_of_files $out $experiment $aux $outcontrol $auxcontrol $quality $cutsite
+cat "$datadir"/"$experiment"/outdata/_q"$quality".bed | cut -f-5 |LC_ALL=C uniq -c | awk '{print $2,$3,$4,$5,$6,$1}' | tr " " "," > "$datadir"/"$experiment"/auxdata/aux
 #####UMI filtering
 cp "$datadir"/"$experiment"/auxdata/aux "$datadir"/"$experiment"/outdata/pre_umi_filtering.csv
 
