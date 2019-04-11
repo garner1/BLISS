@@ -45,7 +45,7 @@ for row in data_aggegated_by_umi_identity[1:]:
     data_aggegated_by_umi_similarity.append(row)
     row_old = row
 
-thefile = open(sys.argv[2], 'wa') 
+thefile = open(sys.argv[2], 'a+') 
 for item in data_aggegated_by_umi_similarity:
   print>>thefile, item
 
