@@ -47,6 +47,7 @@ for row in data_aggegated_by_umi_identity[1:]:
 
 thefile = open(sys.argv[2], 'a+') 
 for item in data_aggegated_by_umi_similarity:
-  print>>thefile, item
+  # print>>thefile, item
+  print(item,file=thefile)
 
 print('Done with filtering UMIs!')
