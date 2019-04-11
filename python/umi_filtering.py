@@ -6,7 +6,7 @@ import numpy as np
 
 filename = sys.argv[1]
 
-with open(filename, 'rb') as f:
+with open(filename, 'r') as f:
     reader = csv.reader(f)
     data = list(reader)
 
@@ -49,4 +49,4 @@ thefile = open(sys.argv[2], 'wa')
 for item in data_aggegated_by_umi_similarity:
   print>>thefile, item
 
-print 'Done with filtering UMIs!'
+print('Done with filtering UMIs!')

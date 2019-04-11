@@ -1,6 +1,6 @@
 #!/bin/usr/env bash
 
-# RUN AS: bash prepare_run.sh samplesheet.csv BICRO66
+# RUN AS: bash prepare_run.sh samplesheet.csv BICRO66 fastqdir
 # head -1 samplesheet.csv as: BB78b,Caco2_Ctrl_2A,CATCAATC,Homo sapiens,5
 
 inputfile=$1 #samplesheet.csv
