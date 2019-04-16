@@ -25,7 +25,7 @@ if [ $genome == human ]; then
     refgen=$HOME/Work/genomes/Homo_sapiens.GRCh37.dna.primary_assembly.fa/GRCh37.fa
 fi
 if [ $genome == mus ]; then
-    refgen=$HOME/Work/genomes/Mus_musculus.GRCm38.dna.toplevel.fa.gz
+    refgen=$HOME/Work/genomes/mm10/mm10.fa
 fi
 ################################################################################
 # LOAD DATA FILES

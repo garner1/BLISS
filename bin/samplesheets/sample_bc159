@@ -1,0 +1,14 @@
+BB191,Caco2_NT,GCTTGGAG,Homo sapiens
+BB191,Caco2_ETO,CTAACGAG,Homo sapiens
+BB192,Caco2_coli_Mut,AGCCATCA,Homo sapiens
+BB192,Caco2_coli_WT,GCTTGTCA,Homo sapiens
+BB193,Caco2_coli_Mut,GTCACCGT,Homo sapiens
+BB193,Caco2_coli_WT1,TCACATCT,Homo sapiens
+BB194,Caco2_coli_Mut,GTCACCGT,Homo sapiens
+BB194,Caco2_coli_WT2,TCACATCT,Homo sapiens
+BB195,Orgx3_coli_Mut,CTAACGAG,mus musculus
+BB195,Orgx3_coli_WT,GCTTGGAG,mus musculus
+BB196,Orgx4_NT,GCTTGTCA,mus musculus
+BB196,Orgx4_ETO,AGCCATCA,mus musculus
+BB197,Orgx4_coli_Mut,CTAACGAG,mus musculus
+BB197,Orgx4_coli_WT,GCTTGGAG,mus musculus
