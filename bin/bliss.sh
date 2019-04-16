@@ -60,8 +60,14 @@ cp "$datadir"/"$experiment"/auxdata/aux "$datadir"/"$experiment"/outdata/pre_umi
 
 "$bin"/module/umi_filter_1.sh "$datadir"/"$experiment"/outdata/pre_umi_filtering.csv "$datadir"/"$experiment"/outdata/q"$quality"_aux
 "$bin"/module/umi_filter_2.sh "$datadir"/"$experiment"/outdata/q"$quality"_aux "$datadir"/"$experiment"/outdata/q"$quality"_chr-loc-strand-umi-pcr
-"$bin"/module/umi_filter_3.sh "$datadir"/"$experiment"/outdata/q"$quality"_chr-loc-strand-umi-pcr  "$datadir"/"$experiment"/outdata/q"$quality"_chr-loc-countDifferentUMI.bed
-
+if [ $genome == human ]; then
+    "$bin"/module/umi_filter_3.sh "$datadir"/"$experiment"/outdata/q"$quality"_chr-loc-strand-umi-pcr  "$datadir"/"$experiment"/outdata/q"$quality"_chr-loc-countDifferentUMI.bed
+fi
+if [ $genome == mus ]; then
+    input="$datadir"/"$experiment"/outdata/q"$quality"_chr-loc-strand-umi-pcr
+    output="$datadir"/"$experiment"/outdata/q"$quality"_chr-loc-countDifferentUMI.bed
+    cat $input | grep -v "_" | sed -e 's/chrX/chr21/g' | sed -e 's/chrY/chr22/g' | cut -f-3 | LC_ALL=C uniq -c | awk '{OFS="\t";print $2,$3,$4,$1}' > $output
+fi
 echo "Alignment statistics:" >> "$datadir"/"$experiment"/outdata/summary.txt
 samtools flagstat "$datadir"/"$experiment"/outdata/*.sam >> "$datadir"/"$experiment"/outdata/summary.txt
 echo "Number of left and right cuts:" >> "$datadir"/"$experiment"/outdata/summary.txt
