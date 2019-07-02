@@ -19,8 +19,7 @@ while read -r line; do
     sample=`echo $line|cut -d',' -f2`
     barcode=`echo $line|cut -d',' -f3`
     echo bash ~/Work/pipelines/BLISS/bin/bliss.sh "$code" human ~/Work/pipelines/BLISS/patterns/"$code"_*_"$barcode" 30 "$dir" >> ./runs/run_pipeline_$run.sh
-    echo mv ~/Work/dataset/bliss/"$code"/outdata ~/Work/dataset/bliss/"$code"/outdata_"$barcode" >> ./runs/run_pipeline_$run.sh
-    echo rm -r ~/Work/dataset/bliss/"$code"/indata >> ./runs/run_pipeline_$run.sh
+    echo mv ~/Work/dataset/bliss/"$code"/outdata/* ~/Work/dataset/bliss/"$code"/outdata_"$barcode" >> ./runs/run_pipeline_$run.sh
     echo >> ./runs/run_pipeline_$run.sh
 done < $inputfile
 chmod +x ./runs/run_pipeline_$run.sh
