@@ -22,7 +22,7 @@ while read -r line; do
     echo mkdir -p ~/Work/dataset/bliss/"$code"/outdata_"$barcode" >> ./runs/run_pipeline_$run.sh
     echo mkdir -p ~/Work/dataset/bliss/"$code"/auxdata_"$barcode" >> ./runs/run_pipeline_$run.sh
     echo mv ~/Work/dataset/bliss/"$code"/outdata/* ~/Work/dataset/bliss/"$code"/outdata_"$barcode" >> ./runs/run_pipeline_$run.sh
-    echo mv ~/Work/dataset/bliss/"$code"/auxdata/* ~/Work/dataset/bliss/"$code"/auxdata_"$barcode" >> ./runs/run_pipeline_$run.sh
+    echo rm -r ~/Work/dataset/bliss/"$code"/indata >> ./runs/run_pipeline_$run.sh
     echo >> ./runs/run_pipeline_$run.sh
 done < $inputfile
 chmod +x ./runs/run_pipeline_$run.sh

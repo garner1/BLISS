@@ -14,8 +14,8 @@ numbproc=24
 ################################################################################
 # PREPARE DIRECTORY STRUCTURE
 datadir=$HOME/Work/dataset/bliss && mkdir -p $datadir/$experiment
-bin=$HOME/Dropbox/pipelines/BLISS/bin
-python=$HOME/Dropbox/pipelines/BLISS/python
+bin=$HOME/Work/pipelines/BLISS/bin
+python=$HOME/Work/pipelines/BLISS/python
 in=$datadir/$experiment/indata && mkdir -p $in
 out=$datadir/$experiment/outdata && mkdir -p $out
 outcontrol=$datadir/$experiment/outdata.control && mkdir -p $outcontrol
