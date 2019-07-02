@@ -44,4 +44,5 @@ if [[ ! -z "$cutsite" && $numb_of_files == 1 ]]; then # IF THERE IS ENZYME && WI
     wait $pid1
     wait $pid2
 fi
+rm $out/$experiment.q$quality.bam #clean
 echo 'Done'

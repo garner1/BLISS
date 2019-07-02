@@ -28,9 +28,7 @@ if [ $genome == mus ]; then
     refgen=$HOME/Work/genomes/mm10/mm10.fa
 fi
 ################################################################################
-# LOAD DATA FILES
-
-find $fastqDir -maxdepth 1 -type f -iname "$experiment.fastq.gz" | sort > filelist_"$experiment"
+find $fastqDir -maxdepth 1 -type f -iname "${experiment}*.fastq.gz" | sort > filelist_"$experiment"
 
 numb_of_files=`cat filelist_"$experiment" | wc -l`
 r1=`cat filelist_"$experiment" | head -n1`
@@ -68,8 +66,14 @@ if [ $genome == mus ]; then
     output="$datadir"/"$experiment"/outdata/q"$quality"_chr-loc-countDifferentUMI.bed
     cat $input | grep -v "_" | sed -e 's/chrX/chr21/g' | sed -e 's/chrY/chr22/g' | cut -f-3 | LC_ALL=C uniq -c | awk '{OFS="\t";print $2,$3,$4,$1}' > $output
 fi
+
+
 echo "Alignment statistics:" >> "$datadir"/"$experiment"/outdata/summary.txt
 samtools flagstat "$datadir"/"$experiment"/outdata/*.sam >> "$datadir"/"$experiment"/outdata/summary.txt
+
+rm "$datadir"/"$experiment"/outdata/*.sam #clean
+rm -r "$datadir"/"$experiment"/auxdata* #clean
+
 echo "Number of left and right cuts:" >> "$datadir"/"$experiment"/outdata/summary.txt
 cat "$datadir"/"$experiment"/outdata/q"$quality"_chr-loc-strand-umi-pcr | grep -v "_" | cut -f4 | sort | uniq -c >> "$datadir"/"$experiment"/outdata/summary.txt
 echo "Number of DSB locations:" >> "$datadir"/"$experiment"/outdata/summary.txt
