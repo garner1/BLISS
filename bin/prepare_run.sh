@@ -5,9 +5,9 @@
 
 inputfile=$1
 run=$2
+dir=$3
 
 # dir=/home/garner1/Work/dataset/bliss
-dir=/media/bicroserver_2-seq/$run/FASTQ
 rm -f ./runs/run_pipeline_$run.sh
 
 echo "#!/bin/usr/env bash" >> ./runs/run_pipeline_$run.sh
