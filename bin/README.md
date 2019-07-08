@@ -1,6 +1,6 @@
 # bliss
 
-From the bin directory run the commands as in test_pipeline to test the pipeline
+From the bin directory run the commands as in test_pipeline to test the pipeline on a small dataset
 
 Requires (at least):
 
