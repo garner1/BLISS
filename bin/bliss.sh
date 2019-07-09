@@ -45,8 +45,7 @@ if [ ! -f $in/r1oneline.fq ]; then
 fi
 "$bin"/module/pattern_filtering.sh $in $out $patfile 
 "$bin"/module/prepare_for_mapping.sh $numb_of_files $out $aux $in 
-"$bin"/module/mapping.sh $numb_of_files $numbproc $refgen $aux $out $experiment 
-"$bin"/module/mapping_quality.sh $numb_of_files $out $experiment $quality 
+"$bin"/module/mapping.sh $numb_of_files $numbproc $refgen $aux $out $experiment $quality
 "$bin"/module/umi_joining.sh $numb_of_files $out $experiment $aux $quality
 cat "$datadir"/"$experiment"/outdata/_q"$quality".bed | cut -f-5 |LC_ALL=C uniq -c | awk '{print $2,$3,$4,$5,$6,$1}' | tr " " "," > "$datadir"/"$experiment"/auxdata/aux
 #####UMI filtering
@@ -64,9 +63,8 @@ if [ $genome == mus ]; then
 fi
 
 echo "Alignment statistics:" >> "$datadir"/"$experiment"/outdata/summary.txt
-samtools flagstat "$datadir"/"$experiment"/outdata/*.sam >> "$datadir"/"$experiment"/outdata/summary.txt
+samtools flagstat "$datadir"/"$experiment"/outdata/*.all.bam >> "$datadir"/"$experiment"/outdata/summary.txt
 
-rm "$datadir"/"$experiment"/outdata/*.sam #clean
 rm -r "$datadir"/"$experiment"/auxdata* #clean
 
 echo "Number of left and right cuts:" >> "$datadir"/"$experiment"/outdata/summary.txt

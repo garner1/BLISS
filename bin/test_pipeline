@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #FROM THE bin DIRECTORY
-
+rm -r ~/Work/dataset/bliss/TEST
 #PREPARE THE PATTERN FILE 
 bash prepare_pattern.sh test/samplesheet/test.csv 
 mv TEST_DMSO_AGCCATCA ../patterns
