@@ -3,13 +3,10 @@ numb_of_files=$1
 out=$2
 experiment=$3
 aux=$4
-outcontrol=$5
-auxcontrol=$6
-quality=$7
-cutsite=$8
+quality=$5
 
 echo 'Selecting unique UMIs'
-if [[ -z "$cutsite" && $numb_of_files == 1 ]]; then # IF THERE IS NO ENZYME && WITH SE READS
+if [[ $numb_of_files == 1 ]]; then # IF SE READS
     bedtools bamtobed -i $out/$experiment.q$quality.sorted.bam | awk '$6 == "+"' | awk '{OFS="\t";print $4,$1,$2,"+"}' > $aux/forward & pid1=$! # if + strand DSB location is the second field
     bedtools bamtobed -i $out/$experiment.q$quality.sorted.bam | awk '$6 == "-"' | awk '{OFS="\t";print $4,$1,$3,"-"}' > $aux/reverse & pid2=$! # if - strand DSB location is the third field
     wait $pid1
@@ -25,7 +22,7 @@ if [[ -z "$cutsite" && $numb_of_files == 1 ]]; then # IF THERE IS NO ENZYME && W
     awk '{print $2,$3,$3+1,$4,$5,$1}' | tr " " "\t" > $out/_q$quality.bed 
 fi
 
-if [[ -z "$cutsite" && $numb_of_files == 2 ]]; then # IF THERE IS NO ENZYME && WITH PE READS
+if [[ $numb_of_files == 2 ]]; then # IF PE READS
     bedtools bamtobed -i $out/$experiment.q$quality.sorted.bam | awk '$6 == "+"' | awk '{OFS="\t";print $4,$1,$2,"+"}' | grep -v '\\2' | sed 's/\/1//' > $aux/forward & pid1=$!
     bedtools bamtobed -i $out/$experiment.q$quality.sorted.bam | awk '$6 == "-"' | awk '{OFS="\t";print $4,$1,$3,"-"}' | grep -v '\\2' | sed 's/\/1//' > $aux/reverse & pid2=$!
     wait $pid1

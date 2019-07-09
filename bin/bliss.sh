@@ -9,7 +9,6 @@ genome=$2			# e.i. us or human
 patfile=$3			# is the linker pattern file
 quality=$4			# mapping quality
 fastqDir=$5			# full path to directory containing the fastq file
-cutsite=$6			# leave empty, not in use
 numbproc=24
 ################################################################################
 # PREPARE DIRECTORY STRUCTURE
@@ -18,9 +17,7 @@ bin=$HOME/Work/pipelines/BLISS/bin
 python=$HOME/Work/pipelines/BLISS/python
 in=$datadir/$experiment/indata && mkdir -p $in
 out=$datadir/$experiment/outdata && mkdir -p $out
-outcontrol=$datadir/$experiment/outdata.control && mkdir -p $outcontrol
 aux=$datadir/$experiment/auxdata && mkdir -p $aux
-auxcontrol=$datadir/$experiment/auxdata.control && mkdir -p $auxcontrol
 if [ $genome == human ]; then
     refgen=$HOME/Work/genomes/Homo_sapiens.GRCh37.dna.primary_assembly.fa/GRCh37.fa
 fi
@@ -44,14 +41,13 @@ fi
 rm filelist_"$experiment"
 ################################################################################
 if [ ! -f $in/r1oneline.fq ]; then
-    # "$bin"/module/quality_control.sh $numb_of_files $numbproc $out $r1 $r2 
     "$bin"/module/prepare_files.sh  $r1 $in $numb_of_files $r2
 fi
-"$bin"/module/pattern_filtering.sh $in $outcontrol $out $patfile $cutsite
-"$bin"/module/prepare_for_mapping.sh $numb_of_files $out $aux $outcontrol $auxcontrol $in $cutsite
+"$bin"/module/pattern_filtering.sh $in $out $patfile 
+"$bin"/module/prepare_for_mapping.sh $numb_of_files $out $aux $in 
 "$bin"/module/mapping.sh $numb_of_files $numbproc $refgen $aux $out $experiment 
-"$bin"/module/mapping_quality.sh $numb_of_files $out $experiment $outcontrol $quality $cutsite
-"$bin"/module/umi_joining.sh $numb_of_files $out $experiment $aux $outcontrol $auxcontrol $quality $cutsite
+"$bin"/module/mapping_quality.sh $numb_of_files $out $experiment $quality 
+"$bin"/module/umi_joining.sh $numb_of_files $out $experiment $aux $quality
 cat "$datadir"/"$experiment"/outdata/_q"$quality".bed | cut -f-5 |LC_ALL=C uniq -c | awk '{print $2,$3,$4,$5,$6,$1}' | tr " " "," > "$datadir"/"$experiment"/auxdata/aux
 #####UMI filtering
 cp "$datadir"/"$experiment"/auxdata/aux "$datadir"/"$experiment"/outdata/pre_umi_filtering.csv
@@ -66,7 +62,6 @@ if [ $genome == mus ]; then
     output="$datadir"/"$experiment"/outdata/q"$quality"_chr-loc-countDifferentUMI.bed
     cat $input | grep -v "_" | sed -e 's/chrX/chr21/g' | sed -e 's/chrY/chr22/g' | cut -f-3 | LC_ALL=C uniq -c | awk '{OFS="\t";print $2,$3,$4,$1}' > $output
 fi
-
 
 echo "Alignment statistics:" >> "$datadir"/"$experiment"/outdata/summary.txt
 samtools flagstat "$datadir"/"$experiment"/outdata/*.sam >> "$datadir"/"$experiment"/outdata/summary.txt
