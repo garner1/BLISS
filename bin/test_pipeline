@@ -1,0 +1,13 @@
+#FROM THE bin DIRECTORY
+
+#PREPARE THE PATTERN FILE 
+bash prepare_pattern.sh test/samplesheet/test.csv 
+mv TEST_DMSO_AGCCATCA ../patterns
+
+#PREPARE THE RUN FILE
+bash prepare_run.sh test/samplesheet/test.csv TEST test/fastq
+cp runs/run_pipeline_TEST.sh .
+
+bash run_pipeline_TEST.sh
+
+#THE CONTENT OF THE OUTPUT DIRECTORY SHOULD COINCIDE WITH THE CONTENT OF THE outdata_AGCCATCA DIRECTORY IN THE test FOLDER
